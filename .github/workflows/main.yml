@@ -57,6 +57,7 @@ jobs:
       - name: Build 🔧
         run: |
           pnpm build
+          touch ./out/.nojekyll
 
       - name: Upload artifact 📁▶️🌐
         uses: actions/upload-pages-artifact@v3
