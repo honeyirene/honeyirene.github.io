@@ -26,10 +26,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "pnpm"
+
+      - name: Setup Pnpm 📌
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: false
 
       - name: Install Dependency 📁◀️🌐
         run: |
+          corepack enable
           pnpm i
 
       - name: Setup Pages ⚙️
